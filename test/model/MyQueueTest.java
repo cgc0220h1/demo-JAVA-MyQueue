@@ -38,5 +38,6 @@ class MyQueueTest {
         String expectedString = listString.getHead().getData();
         String actualString = listString.dequeue().getData();
         assertEquals(expectedString, actualString);
+        assertEquals("b",listString.getHead().getData());
     }
 }
