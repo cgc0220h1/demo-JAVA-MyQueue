@@ -43,6 +43,7 @@ public class MyQueue<E> {
         }
         tail.next = newNode;
         tail = newNode;
+        tail.next = head;
         numNodes++;
     }
 
@@ -52,6 +53,7 @@ public class MyQueue<E> {
         }
         Node<E> node = head;
         head = head.next;
+        tail.next = head;
         if (head == null) {
             tail = null;
         }
